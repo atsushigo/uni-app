@@ -13,4 +13,6 @@ then open in HbuilderX IDE
 
 ### Uni-app試做測試
 
-スクリーンショット 2020-02-18 午前11.10.42
+![image](https://github.com/sam921611/uni-app/blob/master/スクリーンショット%202020-02-18%20午前11.10.42.png)
+
+
