@@ -13,3 +13,4 @@ then open in HbuilderX IDE
 
 ### Uni-app試做測試
 
+スクリーンショット 2020-02-18 午前11.10.42
