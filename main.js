@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+// import axios from '@/js_sdk/gangdiedao-uni-axios'
 
 Vue.config.productionTip = false
 

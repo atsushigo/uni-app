@@ -69,12 +69,15 @@
 						</t-tr>
 					</t-table>
 					<!-- ------------------ -->
-					<uni-badge text="1"></uni-badge>
+					<!-- <uni-badge text="1"></uni-badge>
 					<uni-badge text="2" type="success" @click="bindClick"></uni-badge>
-					<uni-badge text="3" type="primary" :inverted="true"></uni-badge>
+					<uni-badge text="3" type="primary" :inverted="true"></uni-badge> -->
 				</view>
 			</view>
-		</view>
+		
+		
+		<view><br><br><br><br></view>
+	</view>
 </template>
 
 
@@ -85,15 +88,15 @@
     	import tTh from '@/components/t-table/t-th.vue';
     	import tTr from '@/components/t-table/t-tr.vue';
     	import tTd from '@/components/t-table/t-td.vue';
-		// --------------------
-		import {uniBadge} from '@dcloudio/uni-ui'
+		// --------------------//
+		// import {uniBadge} from '@dcloudio/uni-ui'
 	export default {
 		components: {
 			ynGallery,tTable,
 			tTh,
 			tTr,
 			tTd,
-			uniBadge
+			// uniBadge
 		},
 		data() {
 			return {
