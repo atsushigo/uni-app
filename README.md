@@ -14,5 +14,7 @@ then open in HbuilderX IDE
 ### Uni-app試做測試
 
 ![image](https://github.com/sam921611/uni-app/blob/master/スクリーンショット%202020-02-18%20午前11.10.42.png)
+![image](https://github.com/sam921611/uni-app/blob/master/スクリーンショット%202020-02-18%20午前11.28.56.png)
+
 
 
