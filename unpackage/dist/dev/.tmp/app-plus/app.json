@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/1",
+    "pages/index/2",
+    "pages/index/3"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "backgroundColorBottom": "#F4F5F6"
+  },
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#FF9700",
+    "borderStyle": "black",
+    "backgroundColor": "#33D0FF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/gun.png",
+        "selectedIconPath": "static/gun.png",
+        "text": "尚未開始"
+      },
+      {
+        "pagePath": "pages/index/1",
+        "iconPath": "static/project.png",
+        "selectedIconPath": "static/project.png",
+        "text": "進行中"
+      },
+      {
+        "pagePath": "pages/index/2",
+        "iconPath": "static/finish-flag.png",
+        "selectedIconPath": "static/finish-flag.png",
+        "text": "已截止"
+      },
+      {
+        "pagePath": "pages/index/3",
+        "iconPath": "static/recruitment.png",
+        "selectedIconPath": "static/recruitment.png",
+        "text": "徵稿中"
+      }
+    ]
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "淡江大學活動報名系統Test",
+  "compilerVersion": "2.4.2",
+  "usingComponents": {}
+}

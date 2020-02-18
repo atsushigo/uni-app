@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+                CSS.supports('top: constant(a)'))
+            document.write(
+                '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+                (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"]::-webkit-search-cancel-button {
+                display: none;
+            }
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"淡江大學活動報名系統Test","entryPagePath":"pages/index/index.html","page":{"pages/index/index.html":{"window":{"navigationBarTitleText":"淡江大學活動報名系統Test","navigationBarBackgroundColor":"#33D0FF","backgroundColor":"#F8F8F8","usingComponents":{"yn-gallery":"/components/YnComponents/ynGallery/ynGallery","t-table":"/components/t-table/t-table","t-th":"/components/t-table/t-th","t-tr":"/components/t-table/t-tr","t-td":"/components/t-table/t-td","uni-badge":"/node-modules/_@dcloudio_uni-ui@1.1.0@@dcloudio/uni-ui/lib/uni-badge/uni-badge"}}},"pages/index/1.html":{"window":{"navigationBarTitleText":"淡江大學活動報名系統Test","navigationBarBackgroundColor":"#33D0FF","backgroundColor":"#F8F8F8","usingComponents":{"yn-gallery":"/components/YnComponents/ynGallery/ynGallery","t-table":"/components/t-table/t-table","t-th":"/components/t-table/t-th","t-tr":"/components/t-table/t-tr","t-td":"/components/t-table/t-td","uni-badge":"/node-modules/_@dcloudio_uni-ui@1.1.0@@dcloudio/uni-ui/lib/uni-badge/uni-badge"}}},"pages/index/2.html":{"window":{"navigationBarTitleText":"淡江大學活動報名系統Test","navigationBarBackgroundColor":"#33D0FF","backgroundColor":"#F8F8F8","usingComponents":{"yn-gallery":"/components/YnComponents/ynGallery/ynGallery","t-table":"/components/t-table/t-table","t-th":"/components/t-table/t-th","t-tr":"/components/t-table/t-tr","t-td":"/components/t-table/t-td","uni-badge":"/node-modules/_@dcloudio_uni-ui@1.1.0@@dcloudio/uni-ui/lib/uni-badge/uni-badge"}}},"pages/index/3.html":{"window":{"navigationBarTitleText":"淡江大學活動報名系統Test","navigationBarBackgroundColor":"#33D0FF","backgroundColor":"#F8F8F8","usingComponents":{"yn-gallery":"/components/YnComponents/ynGallery/ynGallery","t-table":"/components/t-table/t-table","t-th":"/components/t-table/t-th","t-tr":"/components/t-table/t-tr","t-td":"/components/t-table/t-td","uni-badge":"/node-modules/_@dcloudio_uni-ui@1.1.0@@dcloudio/uni-ui/lib/uni-badge/uni-badge"}}}},"global":{"window":{"navigationBarTextStyle":"white","navigationBarTitleText":"uni-app","navigationBarBackgroundColor":"#F8F8F8","backgroundColor":"#F8F8F8","backgroundColorBottom":"#F4F5F6"}},"tabBar":{"color":"#444444","selectedColor":"#FF9700","backgroundColor":"#33D0FF","borderStyle":"black","list":[{"pagePath":"pages/index/index.html","iconPath":"static/gun.png","selectedIconPath":"static/gun.png","text":"尚未開始"},{"pagePath":"pages/index/1.html","iconPath":"static/project.png","selectedIconPath":"static/project.png","text":"進行中"},{"pagePath":"pages/index/2.html","iconPath":"static/finish-flag.png","selectedIconPath":"static/finish-flag.png","text":"已截止"},{"pagePath":"pages/index/3.html","iconPath":"static/recruitment.png","selectedIconPath":"static/recruitment.png","text":"徵稿中"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/index/index","pages/index/1","pages/index/2","pages/index/3"],"nvueCompiler":"uni-app","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"2.4.2","usingComponents":{}}
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                var wxss = page.replace('.html', '.wxss')
+                if (
+                    typeof __wxAppCode__ !== 'undefined' &&
+                    __wxAppCode__.hasOwnProperty(wxss)
+                ) {
+                    var setCssToHead = __wxAppCode__[wxss]
+                    typeof setCssToHead === 'function' && setCssToHead()
+                    document.dispatchEvent(new CustomEvent("generateFuncReady", {
+                        detail: {
+                            generateFunc: $gwx(page.replace('.html', '.wxml'))
+                        }
+                    }));
+                } else {
+                    plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+                }
+            };
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

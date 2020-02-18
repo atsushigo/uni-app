@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "淡江大學活動報名系統Test",
+  "navigationBarBackgroundColor": "#33D0FF",
+  "backgroundColor": "#F8F8F8",
+  "usingComponents": {
+    "yn-gallery": "/components/YnComponents/ynGallery/ynGallery",
+    "t-table": "/components/t-table/t-table",
+    "t-th": "/components/t-table/t-th",
+    "t-tr": "/components/t-table/t-tr",
+    "t-td": "/components/t-table/t-td",
+    "uni-badge": "/node-modules/_@dcloudio_uni-ui@1.1.0@@dcloudio/uni-ui/lib/uni-badge/uni-badge"
+  }
+}
