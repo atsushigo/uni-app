@@ -34,44 +34,44 @@
 		<!-- ------- -->
 		
         <!-- ----------------- -->
-		<view class="warp">
+		<!-- 表格1 -->
+		<view class="warp" >
 				<view class="box">
-					<view class="title">默认效果</view>
+					<view class="title">Json接口 Get測試</view>
+					<view><a href="https://jsonplaceholder.typicode.com/posts">https://jsonplaceholder.typicode.com/posts</a></view>
 					<t-table @change="change">
 						<t-tr>
-							<t-th>序号</t-th>
-							<t-th>姓名</t-th>
-							<t-th>年龄</t-th>
-							<t-th>爱好</t-th>
-						</t-tr>
-						<t-tr v-for="item in tableList" :key="item.id">
-							<t-td>{{ item.id + 1 }}</t-td>
-							<t-td>{{ item.name }}</t-td>
-							<t-td>{{ item.age }}</t-td>
-							<t-td>{{ item.hobby }}</t-td>
+							<t-th>ID</t-th>
+							<t-th>主題</t-th>
+						</t-tr>   
+					<!-- 用slice去取幾到幾個數 -->
+						<t-tr v-for="item in tableList.slice(0,20)" :key="item.id">
+							<t-td>{{ item.id }}</t-td>
+							<t-td>{{ item.title }}</t-td>
 						</t-tr>
 					</t-table>
 				</view>
+				<!-- --------------- -->
+				<data1></data1>
+				<!-- ----------------------- -->
+				<!-- 表格2 -->
 				<view class="box">
-					<view class="title">自定义样式</view>
+					<view class="title">測試接口2</view>
+					<view>	<a href="https://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=549b3a9b-eb6c-4cb1-848b-8c238735e2db">https://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=549b3a9b-eb6c-4cb1-848b-8c238735e2db</a></view>
 					<t-table border="2" border-color="#95b99e" :is-check="true" @change="change">
-						<t-tr font-size="14" color="#95b99e" align="left">
-							<t-th align="left">姓名</t-th>
-							<t-th align="left">年龄</t-th>
-							<t-th align="left">爱好</t-th>
-							<t-th align="center">操作</t-th>
+						<t-tr font-size="20" color="#95b99e" align="center">
+							<t-th align="center">姓名</t-th>
+							<t-th align="center">經度</t-th>
+							<t-th align="center">緯度</t-th>
+							<t-th align="center">   </t-th>
 						</t-tr>
-						<t-tr font-size="12" color="#5d6f61" align="right" v-for="item in tableList" :key="item.id">
-							<t-td align="left">{{ item.name }}</t-td>
-							<t-td align="left">{{ item.age }}</t-td>
-							<t-td align="left">{{ item.hobby }}</t-td>
+						<t-tr font-size="12" color="#5d6f61" align="right" v-for="item in tableList1.slice(0,10)" :key="item.id">
+							<t-td align="left">{{ item.NAME }}</t-td>
+							<t-td align="left">{{ item.LATITUDE }}</t-td>
+							<t-td align="left">{{ item.LONGITUDE }}</t-td>
 							<t-td align="left"><button @click="edit(item)">编辑</button></t-td>
 						</t-tr>
 					</t-table>
-					<!-- ------------------ -->
-					<!-- <uni-badge text="1"></uni-badge>
-					<uni-badge text="2" type="success" @click="bindClick"></uni-badge>
-					<uni-badge text="3" type="primary" :inverted="true"></uni-badge> -->
 				</view>
 			</view>
 		
@@ -92,45 +92,38 @@
 		// import {uniBadge} from '@dcloudio/uni-ui'
 	export default {
 		components: {
-			ynGallery,tTable,
-			tTh,
-			tTr,
-			tTd,
+			ynGallery,
+			tTable,tTh,tTr,tTd,
 			// uniBadge
 		},
+		onLoad() {
+			uni.request({
+				url:'https://jsonplaceholder.typicode.com/posts',
+				method:"GET",
+				success: (res) => {
+					this.tableList = res.data
+				}
+			});
+			uni.request({
+				url:'https://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=549b3a9b-eb6c-4cb1-848b-8c238735e2db',
+				method:"GET",
+				success: (res) => {
+					this.tableList1 = res.data.result.results
+				}
+			})
+		},
+		
 		data() {
 			return {
 				sh: 0,
 				Msg: "0",
 				title: 'Hello',
+				change:[],
 				items:[
 					{name:'Sam',mail:'123@gamil.com'},{name:'Yaris',mail:'1234@gamil.com'},{name:'Tim',mail:'12345@gamil.com'}
 				],
-				tableList: [{
-										id: 0,
-										name: '张三',
-										age: '19',
-										hobby: '游泳'
-									},
-									{
-										id: 1,
-										name: '李四',
-										age: '21',
-										hobby: '绘画'
-									},
-									{
-										id: 2,
-										name: '王二',
-										age: '29',
-										hobby: '滑板'
-									},
-									{
-										id: 3,
-										name: '码字',
-										age: '20',
-										hobby: '蹦极'
-									}
-								],
+				tableList:[],
+				tableList1:[],
 				
 				// 画廊示例数据
 				testimgs: [{
@@ -149,14 +142,11 @@
 				],
 			}
 		},
-		
-		
-		onLoad(){
-			this.setimgs();
-		},
-    
-
 		methods: {
+			
+			
+			
+			
 			onclickimg(imgviewobj) {
 				if (imgviewobj.index != undefined)
 					this.Msg = `${imgviewobj.index}`;

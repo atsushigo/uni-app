@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "淡江大學活動報名系統Test",
+				"navigationBarTitleText": "接口系統Test",
                 "navigationBarBackgroundColor": "#33D0FF", 				
 				"backgroundColor": "#F8F8F8" //窗口的背景色
 			}
@@ -52,25 +52,25 @@
 				"pagePath": "pages/index/index",
 				"iconPath": "static/gun.png",
 				"selectedIconPath": "static/gun.png",
-				"text": "尚未開始"
+				"text": "導航頁"
 			},
 			{
 				"pagePath": "pages/index/1",
 				"iconPath": "static/project.png",
 				"selectedIconPath": "static/project.png",
-				"text": "進行中"
+				"text": "接口1"
 			},
 			{
 				"pagePath": "pages/index/2",
 				"iconPath": "static/finish-flag.png",
 				"selectedIconPath": "static/finish-flag.png",
-				"text": "已截止"
+				"text": "接口2"
 			},
 			{
 				"pagePath": "pages/index/3",
 				"iconPath": "static/recruitment.png",
 				"selectedIconPath": "static/recruitment.png",
-				"text": "徵稿中"
+				"text": "接口3"
 			}
 		]
 	}
